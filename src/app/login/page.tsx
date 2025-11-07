@@ -17,6 +17,7 @@ const LoginPage = () => {
     register,
     handleSubmit,
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     formState: { errors },
   } = useForm<FormValues>();
   const router = useRouter();
@@ -115,7 +116,8 @@ const LoginPage = () => {
             <button
               onClick={() =>
                 signIn("google", {
-                  callbackUrl: "http://localhost:3000/dashboard",
+                  callbackUrl:
+                    "https://nextauth-client-mocha.vercel.app/dashboard",
                 })
               }
               className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full shadow-md hover:bg-gray-200"
