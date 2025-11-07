@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { loginUser } from "@/utils/actions/loginUser";
 import { signIn } from "next-auth/react";
@@ -15,19 +16,20 @@ const LoginPage = () => {
   const {
     register,
     handleSubmit,
+
     formState: { errors },
   } = useForm<FormValues>();
-   const router = useRouter();
- 
+  const router = useRouter();
+
   const onSubmit = async (data: FormValues) => {
-     console.log(data);
+    console.log(data);
     try {
       const res = await loginUser(data);
-      console.log (res);
+      console.log(res);
       if (res.accessToken) {
         alert(res.message);
         localStorage.setItem("accessToken", res.accessToken);
-         router.push("/");
+        router.push("/");
       }
     } catch (err: any) {
       console.error(err.message);
