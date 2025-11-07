@@ -14,5 +14,8 @@ export const authOptions: NextAuthOptions = {
       clientSecret: process.env.Google_SECRET as string,
     }), // // ...add more providers here
   ],
+  pages: {
+    signIn:"/login"
+  },
   secret: process.env.NEXTAUTH_SECRET as string,
 };
