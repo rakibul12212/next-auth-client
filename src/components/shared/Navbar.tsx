@@ -80,7 +80,7 @@ const Navbar = ({ session }: { session: UserProps | null }) => {
           <button
             onClick={() =>
               signOut({
-                callbackUrl: "https://nextauth-client-mocha.vercel.app/login",
+                callbackUrl: "https://next-auth-client-taupe.vercel.app/login",
               })
             }
             className="border border-red-500 text-red-500 px-5 py-2 rounded-full hover:bg-red-500 hover:text-black transition duration-200"

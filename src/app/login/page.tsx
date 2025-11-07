@@ -117,7 +117,7 @@ const LoginPage = () => {
               onClick={() =>
                 signIn("google", {
                   callbackUrl:
-                    "https://nextauth-client-mocha.vercel.app/dashboard",
+                    "https://next-auth-client-taupe.vercel.app/dashboard",
                 })
               }
               className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full shadow-md hover:bg-gray-200"
